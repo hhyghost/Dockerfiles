@@ -1,0 +1,13 @@
+#基础镜像
+FROM nginx
+
+#维护人信息
+MAINTAINER huanghaoyu 393606325@qq.com
+
+COPY ./nginx.conf /etc/nginx/
+
+ADD ./dist /usr/share/nginx/html/
+
+#暴露端口
+EXPOSE 80
+
